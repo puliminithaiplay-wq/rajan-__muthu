@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f7f7f8;
+    color:#171717;
+}
+
+.navbar{
+    height:75px;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(15px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #eee;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+}
+
+.logo span{
+    color:#e63946;
+}
+
+.logo small{
+    display:block;
+    font-size:8px;
+    color:#888;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#555;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#e63946;
+}
+
+.nav-actions{
+    display:flex;
+    gap:10px;
+}
+
+.theme-btn,
+.cart-btn{
+    border:0;
+    cursor:pointer;
+}
+
+.theme-btn{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#f1f1f1;
+}
+
+.cart-btn{
+    background:#111;
+    color:white;
+    padding:11px 18px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    min-height:520px;
+    padding:65px 7%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+    background:
+    radial-gradient(circle at 80% 20%,#ffd8d3,transparent 30%),
+    linear-gradient(135deg,#fff,#fff4f2);
+}
+
+.tag{
+    display:inline-block;
+    background:#ffe9e6;
+    color:#e63946;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:900;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.hero h1 span{
+    color:#e63946;
+}
+
+.hero p{
+    max-width:530px;
+    color:#777;
+    line-height:1.7;
+    margin-top:22px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:15px 24px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.primary-btn{
+    background:#e63946;
+    color:white;
+    border:0;
+}
+
+.secondary-btn{
+    background:white;
+    border:1px solid #ddd;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px #e6394640;
+}
+
+/* HERO VISUAL */
+
+.hero-visual{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.food-circle{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:linear-gradient(145deg,#e63946,#ff836f);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:145px;
+    box-shadow:0 30px 70px #0002;
+    animation:float 4s infinite ease-in-out;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.floating-card{
+    position:absolute;
+    background:white;
+    padding:14px 17px;
+    border-radius:15px;
+    box-shadow:0 15px 40px #0002;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.top-card{
+    top:30px;
+    left:40px;
+}
+
+.bottom-card{
+    bottom:30px;
+    right:30px;
+}
+
+/* SEARCH */
+
+.search-area{
+    max-width:800px;
+    margin:-25px auto 0;
+    position:relative;
+    z-index:5;
+    padding:0 20px;
+}
+
+.search-box{
+    background:white;
+    padding:8px 18px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 15px 40px #0002;
+}
+
+.search-box input{
+    width:100%;
+    border:0;
+    outline:0;
+    padding:15px;
+    font-size:15px;
+}
+
+/* SECTION */
+
+.section{
+    padding:65px 7%;
+}
+
+.section-title{
+    margin-bottom:25px;
+}
+
+.section-title h2{
+    font-size:30px;
+}
+
+.section-title p{
+    color:#888;
+    font-size:13px;
+    margin-top:6px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:flex;
+    gap:12px;
+    overflow:auto;
+    margin-bottom:30px;
+}
+
+.category{
+    border:1px solid #ddd;
+    background:white;
+    padding:12px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    white-space:nowrap;
+    font-weight:bold;
+}
+
+.category.active,
+.category:hover{
+    background:#111;
+    color:white;
+}
+
+/* FOOD */
+
+.food-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.food-card{
+    background:white;
+    border
