@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusBite | Smart Canteen</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        Campus<span>Bite</span>
+        <small>SMART CANTEEN</small>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#popular">Popular</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            ⚡ SMART • FAST • AFFORDABLE
+        </div>
+
+        <h1>
+            Homemade Taste.<br>
+            <span>Campus Price.</span>
+        </h1>
+
+        <p>
+            Order your favourite college canteen meals
+            before the break. Get your token and skip
+            the waiting queue.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn" onclick="scrollToMenu()">
+                Order Food →
+            </button>
+
+            <button class="secondary-btn" onclick="showHowItWorks()">
+                How it works
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="food-circle">
+            🍛
+        </div>
+
+        <div class="floating-card top-card">
+            🔥 Today's Special
+        </div>
+
+        <div class="floating-card bottom-card">
+            ⏱️ Avg. 8–12 min
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="search-area">
+
+    <div class="search-box">
+
+        <span>🔍</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search biryani, fried rice, parotta..."
+            oninput="searchFood()"
+        >
+
+    </div>
+
+</div>
+
+
+<section class="section" id="menu">
+
+    <div class="section-title">
+
+        <div>
+            <h2>Today's Menu</h2>
+            <p>Freshly prepared for our campus</p>
+        </div>
+
+    </div>
+
+
+    <div class="categories">
+
+        <button class="category active"
+            onclick="filterFood('all', this)">
+            🍽️ All
+        </button>
+
+        <button class="category"
+            onclick="filterFood('rice', this)">
+            🍚 Variety Rice
+        </button>
+
+        <button class="category"
+            onclick="filterFood('parotta', this)">
+            🫓 Parotta
+        </button>
+
+        <button class="category"
+            onclick="filterFood('drinks', this)">
+            🧃 Drinks
+        </button>
+
+    </div>
+
+
+    <div class="food-grid" id="foodGrid">
+
+
+        <div class="food-card" data-category="rice">
+
+            <div class="food-image">
+                <span class="badge">POPULAR</span>
+                🍗🍚
+            </div>
+
+            <div class="food-info">
+
+                <h3>Chicken Fried Rice</h3>
+
+                <p>
+                    Spicy chicken fried rice
+                    prepared fresh for students.
+                </p>
+
+                <div class="food-details">
+                    <span>⭐ 4.8</span>
+                    <span>⏱ 10 min</span>
+                </div>
+
+                <div class="food-bottom">
+
+                    <strong>₹80</strong>
+
+                    <button
+                        onclick="addToCart('Chicken Fried Rice',80)">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-card" data-category="rice">
+
+            <div class="food-image">
+                <span class="badge">BEST SELLER</span>
+                🍗🍛
+            </div>
+
+            <div class="food-info">
+
+                <h3>Chicken Biryani</h3>
+
+                <p>
+                    Aromatic chicken biryani
+                    with deli
